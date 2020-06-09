@@ -19,18 +19,6 @@ let array3 = [
   'We burn, we drown, we stay alive.',
   'just give your dream up for adoption.',
 ];
-let randomIndex1 = Math.floor(Math.random() * array1.length);
-let randomIndex2 = Math.floor(Math.random() * array2.length);
-let randomIndex3 = Math.floor(Math.random() * array3.length);
-
-let string1 = array1[randomIndex1];
-let string2 = array2[randomIndex2];
-let string3 = array3[randomIndex3];
-
-let quote = `${string1} ${string2} ${string3}`;
-
-console.log(quote);
-
 
 var quoteNumber = Number(prompt("Please enter a number from 1 to 5", ""));
 
@@ -55,3 +43,17 @@ if (quoteNumber >= 1 && quoteNumber <= 5) {
    console.log("write a correct number");
  }
  
+ // we need to have 2 set of quote
+ // create new arrays
+ //
+ let genQuote1 = ["our new arrays are here", "it is almost there but need effort", "try again and again and again"];
+ let genQuote2 = ["work again don't be lazy", "do not give up", "one more step"];
+
+ // if the user select 1 or 2
+if (genQuote1 === "our new arrays are here" && genQuote2 == "work again don't be lazy") {
+
+  while (genQuote1 = true && genQuote2 = true) {
+   sentence = Number(prompt('enter 2 types of sentences here: '));
+  console.log(sentence);
+  }
+}
