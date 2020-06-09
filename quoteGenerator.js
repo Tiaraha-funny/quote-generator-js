@@ -31,23 +31,27 @@ let quote = `${string1} ${string2} ${string3}`;
 
 console.log(quote);
 
-//1. use prompt to ask the user how many times we want to generate a random quote
-//2. check if the prompt give us something between 1 and 5
-//3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
-//4. refactor our code into a function, and put the function call inside the loop
-//4.1 generate random numbers
-//4.2 show the generated quotes
 
-var number = Number(prompt("Please enter a number from 1 to 5", ""));
+var quoteNumber = Number(prompt("Please enter a number from 1 to 5", ""));
 
-if (number >= 5) {
-  Number(prompt("Please enter a number from 1 to 5", ""));
-} else {
-    Number(prompt("Your number (" + number + ") is above 5. Please enter a number from 1 to 5", ""));
-}
+if (quoteNumber >= 1 && quoteNumber <= 5) {
 
-  for (let i = 0; i < number; number++ ) {
-  quotes = Math.floor(Math.random() * 5) + 1;
-  quotes = Math.floor(Math.random() * 5) + 1;
-  quotes = Math.floor(Math.random() * 5) + 1;
-}
+  for (let i = 0; i <= quoteNumber; i++) {
+
+     let myQuote_1 = Math.floor(Math.random() * array1.length);
+     let myQuote_2 = Math.floor(Math.random() * array2.length);
+     let myQuote_3 = Math.floor(Math.random() * array3.length);
+
+     let ranQuote_1 = array1[myQuote_1];
+     let ranQuote_2 = array2[myQuote_2];
+     let ranQuote_3 = array3[myQuote_3];
+
+     let quotes = `${ranQuote_1} ${ranQuote_2} ${ranQuote_3}`;
+
+     console.log(quotes);
+   }
+
+  } else {
+   console.log("write a correct number");
+ }
+ 
