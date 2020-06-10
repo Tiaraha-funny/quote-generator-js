@@ -5,6 +5,7 @@ let array1 = [
   'Accidents happen',
   'Either be a good parent',
 ];
+
 let array2 = [
   'the rest of us just',
   'and take risks rather than lie to ourselves',
@@ -12,6 +13,7 @@ let array2 = [
   'Our bones shatter, our skin splits, our hearts break',
   'to your career or ',
 ];
+
 let array3 = [
   'get up and go to work.',
   'and make excuses to stay in our comfort zone.',
@@ -24,7 +26,7 @@ var quoteNumber = Number(prompt("Please enter a number from 1 to 5", ""));
 
 if (quoteNumber >= 1 && quoteNumber <= 5) {
 
-  for (let i = 0; i <= quoteNumber; i++) {
+   for (let i = 0; i <= quoteNumber; i++) {
 
      let myQuote_1 = Math.floor(Math.random() * array1.length);
      let myQuote_2 = Math.floor(Math.random() * array2.length);
@@ -34,26 +36,37 @@ if (quoteNumber >= 1 && quoteNumber <= 5) {
      let ranQuote_2 = array2[myQuote_2];
      let ranQuote_3 = array3[myQuote_3];
 
-     let quotes = `${ranQuote_1} ${ranQuote_2} ${ranQuote_3}`;
+      let quotes = `${ranQuote_1} ${ranQuote_2} ${ranQuote_3}`;
 
-     console.log(quotes);
-   }
-
+      console.log(quotes);
+    }
   } else {
-   console.log("write a correct number");
- }
- 
- // we need to have 2 set of quote
- // create new arrays
- //
- let genQuote1 = ["our new arrays are here", "it is almost there but need effort", "try again and again and again"];
- let genQuote2 = ["work again don't be lazy", "do not give up", "one more step"];
-
- // if the user select 1 or 2
-if (genQuote1 === "our new arrays are here" && genQuote2 == "work again don't be lazy") {
-
-  while (genQuote1 = true && genQuote2 = true) {
-   sentence = Number(prompt('enter 2 types of sentences here: '));
-  console.log(sentence);
+    console.log("write a correct number");
   }
-}
+
+
+let firstentences = ["I am adorable person", "I am uplifted with the show which we watch last time", "I am very content"];
+let secondSentences = ["My sister is crying because of the corona virus", "they are giving up of this life", "tough situation makes people feel down most of the time"];
+let lastSentences = ["alone", "disturb", "above the tower"];
+
+let sentences = prompt("choose the number of the sentence that you want here: ");
+
+  if (sentences >= 1 && sentences <= 2) {
+
+   for (let i = 0; i <= sentences; i++) {
+
+     let myQuote1 = Math.floor(Math.random() * firstentences.length);
+     let myQuote2 = Math.floor(Math.random() * secondSentences.length);
+     let myQuote3 = Math.floor(Math.random() * secondSentences.length);
+
+     let ranQuote1 = firstentences[myQuote1];
+     let ranQuote2 = secondSentences[myQuote2];
+     let ranQuote3 = secondSentences[myQuote3];
+
+      let quotes2 = `${ranQuote1} ${ranQuote2} ${ranQuote3}`;
+      console.log(quotes2);
+    }
+
+   } else {
+    console.log("write a correct number");
+  }
