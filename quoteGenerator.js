@@ -13,7 +13,6 @@ let array2 = [
   'Our bones shatter, our skin splits, our hearts break',
   'to your career or ',
 ];
-
 let array3 = [
   'get up and go to work.',
   'and make excuses to stay in our comfort zone.',
@@ -45,28 +44,33 @@ if (quoteNumber >= 1 && quoteNumber <= 5) {
   }
 
 
-let firstentences = ["I am adorable person", "I am uplifted with the show which we watch last time", "I am very content"];
-let secondSentences = ["My sister is crying because of the corona virus", "they are giving up of this life", "tough situation makes people feel down most of the time"];
-let lastSentences = ["alone", "disturb", "above the tower"];
+ let firstentences = ["I am adorable person", "I am uplifted with the show which we watch last time", "I am very content"];
+ let secondSentences = ["My sister is crying because of the corona virus", "they are giving up of this life", "tough situation makes people feel down most of the time"];
+ let lastSentences = ["alone", "disturb", "above the tower"];
 
-let sentences = prompt("choose the number of the sentence that you want here: ");
+ let sentences = prompt("choose the number of the sentence that you want here: ");
 
-  if (sentences >= 1 && sentences <= 2) {
+   if (sentences === 1) {
+    
+    sentences = Number(prompt("number between 1 to 5"));
 
-   for (let i = 0; i <= sentences; i++) {
+    if(numberofquote >= 1 && numberofquote <= 5) {
 
-     let myQuote1 = Math.floor(Math.random() * firstentences.length);
-     let myQuote2 = Math.floor(Math.random() * secondSentences.length);
-     let myQuote3 = Math.floor(Math.random() * secondSentences.length);
+      for (let i = 0; i <= sentences; i++) {
 
-     let ranQuote1 = firstentences[myQuote1];
-     let ranQuote2 = secondSentences[myQuote2];
-     let ranQuote3 = secondSentences[myQuote3];
+        let myQuote1 = Math.floor(Math.random() * firstentences.length);
+        let myQuote2 = Math.floor(Math.random() * secondSentences.length);
+        let myQuote3 = Math.floor(Math.random() * secondSentences.length);
 
-      let quotes2 = `${ranQuote1} ${ranQuote2} ${ranQuote3}`;
-      console.log(quotes2);
-    }
+        let ranQuote1 = firstentences[myQuote1];
+        let ranQuote2 = secondSentences[myQuote2];
+        let ranQuote3 = secondSentences[myQuote3];
 
-   } else {
-    console.log("write a correct number");
-  }
+        let quotes2 = `${ranQuote1} ${ranQuote2} ${ranQuote3}`;
+        console.log(quotes2);
+     }
+
+    } else {
+     console.log("write a correct number");
+   }
+}
